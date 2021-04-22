@@ -9,7 +9,7 @@
 %Set the sampling frequency so that it is atleast double
 %the maximum analog frequency present in signal. Note that according to the 
 %the Nyquist Theorem, in order to recreate the original signal the 
-%highest frequency in a signal can be maximum of sampling fequency.
+%highest frequency in a signal can be maximum of half the sampling fequency.
 
 Fs=10;
 
