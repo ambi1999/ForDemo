@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# Author: Dr Ambikesh Jayal
+# Author: Dr Ambi
 #     ambi1999@gmail.com
 # Demo code to show the efficiency of NumPy which is 
 # a scientific computing package in Python.
@@ -81,7 +81,8 @@ def processUsingNumpy(df):
 
 #Generate a large array of random numbers, convert it into multidimensional array using numpy reshape
 #arrayrandomnumbers= np.random.randint(1,100000000,20000000)
-arrayrandomnumbers= np.random.randint(1,10000000000,200000000)
+
+arrayrandomnumbers= np.random.randint(1,1000000,2000000000)
 array2d=arrayrandomnumbers.reshape(100,-1)
 
 
@@ -91,15 +92,16 @@ df=pd.DataFrame(array2d)
 res1=processUsingNumpy(df)
 res2=processUsingDataFrame(df)
 
+'''
+Results with 20 billion numbers
 
-# In[ ]:
+Input: np.random.randint(1,1000000,2000000000)
 
+Function 'processUsingNumpy' starts executing
+Function 'processUsingNumpy' has finished execution. 
+****Execution time of 'processUsingNumpy' function equals to 187991 millisecondss
+Function 'processUsingDataFrame' starts executing
+Function 'processUsingDataFrame' has finished execution. 
+****Execution time of 'processUsingDataFrame' function equals to 159787 millisecondss
 
-
-
-
-# In[ ]:
-
-
-
-
+'''
