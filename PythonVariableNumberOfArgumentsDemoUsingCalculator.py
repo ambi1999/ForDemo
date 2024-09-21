@@ -33,3 +33,26 @@ print(res3)
 #[22]
 #[22, 1120]
 #[1120, 22]
+
+#Second version
+def addVersion1(*numbers, operation):
+    results=[]
+    for op in operation:
+        if op=='add':
+            sum=0
+            for i in numbers:
+                sum = sum + i
+            results.append(sum)
+        if op=='mul':
+            mul=1
+            for i in numbers:
+                mul= mul * i
+            results.append(mul)
+    return results
+
+res= addVersion1(1,2,3,4,operation=["add","mul"])
+print(res)
+
+'''
+output is [10, 24]
+'''
